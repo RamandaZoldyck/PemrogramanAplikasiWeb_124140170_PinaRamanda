@@ -1,66 +1,151 @@
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffb8b8;
+
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
+/* Card transparan */
 .container {
     width: 600px;
+    max-width: 100%;
     margin: 40px auto;
     padding: 30px;
-    background-color: hsl(53, 100%, 81%);
-    border: 1px solid rgb(57, 57, 57);
+    box-sizing: border-box;
+
+    /* Transparan dengan efek blur */
+    background: rgba(255, 255, 245, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    /* Sudut membulat */
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 25px;
+
+    /* Bayangan lembut */
+    box-shadow: 0 8px 32px rgba(50, 75, 35, 0.15);
 }
 
 h2 {
     text-align: center;
+    color: #40583b;
 }
 
 label {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
+    color: #40583b;
 }
-
 
 input, select {
     width: 100%;
     padding: 12px;
     margin-top: 8px;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+    background: rgba(255, 255, 245, 0.65);
+    border: 1px solid rgba(120, 145, 95, 0.35);
+    border-radius: 12px;
+    color: #40583b;
+    outline: none;
 }
 
+input:focus, select:focus {
+    border-color: #8ca878;
+    box-shadow: 0 0 8px rgba(140, 168, 120, 0.4);
+}
+
+/* Tombol daftar */
 input[type="submit"] {
-    background-color: hsl(40, 100%, 38%);
-    color: white;
+    background-color: #a9bd83;
+    color: #ffffff;
     border: none;
-    margin-top: 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 13px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
+input[type="submit"]:hover {
+    background-color: #829d62;
+    transform: translateY(-2px);
+}
+
+/* Kotak informasi halaman detail */
 .box {
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #e099a3;
+
+    background: rgba(255, 255, 240, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    color: #40583b;
 }
 
+/* Tabel informasi */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow-wrap: anywhere;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 th, td {
-    border: 1px solid gray;
+    border: 1px solid rgba(255, 255, 255, 0.55);
     padding: 10px;
     text-align: left;
 }
 
 th {
-    background-color: #ffb5c0;
-    color: white;
+    background-color: rgba(169, 189, 131, 0.9);
+    color: #ffffff;
 }
 
+td {
+    background-color: rgba(255, 255, 245, 0.45);
+    color: #40583b;
+}
+
+/* Tautan */
 a {
-    color: rgb(167, 223, 255);
+    color: #557747;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #829d62;
+    text-decoration: underline;
+}
+
+/* Tampilan layar kecil */
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    th, td {
+        padding: 7px;
+        font-size: 14px;
+    }
 }

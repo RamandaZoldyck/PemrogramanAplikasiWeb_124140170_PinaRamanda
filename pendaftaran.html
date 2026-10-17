@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Pendaftaran</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,9 +19,10 @@
             <input type="text" id="nim" name="nim" required>
 
             <label for="prodi">Program Studi</label>
-            <select id="prodi" name="prodi">
-                <option value="Informatika">Informatika</option>
-                <option value="Sistem Informasi">Sistem Informasi</option>
+            <select id="prodi" name="prodi" required>
+                <option value="">Pilih Program Studi</option>
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
                 <option value="Teknik Elektro">Teknik Elektro</option>
             </select>
 
@@ -30,6 +31,10 @@
 
             <input type="submit" value="Daftar">
         </form>
+
+        <p>
+            <a href="detail.html">Lihat Detail Pendaftar</a>
+        </p>
     </div>
 
 </body>
